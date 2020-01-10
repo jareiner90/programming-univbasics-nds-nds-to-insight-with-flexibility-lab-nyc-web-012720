@@ -80,7 +80,8 @@ def movies_with_directors_set(source)
   count = 0
   while count < source.length do
     name = source[count][:name]
-    result << movies_with_director_key(name, source)
+    movies = source[count][:movies]
+    result << movies_with_director_key(name, movies)
     count += 1
   end
   result
